@@ -2,7 +2,7 @@ FROM resin/armv7hf-debian
 
 RUN [ "cross-build-start" ]
 
-RUN apt-get update && apt-get install wget && \
+RUN apt-get update && apt-get install wget python3 && \
     mkdir -p /opt/domoticz && \
     cd /opt/domoticz && \
 	wget https://releases.domoticz.com/releases/release/domoticz_linux_armv7l.tgz && \
