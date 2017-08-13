@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install wget python3 && \
 
 RUN [ "cross-build-end" ]  
 
-EXPOSE 80
+EXPOSE 8080
 ENTRYPOINT ["/opt/domoticz/domoticz"]
-CMD ["-www", "80", "-dbase", "/var/domoticz/domoticz.db", "-log", "/var/log/domoticz.log", "-loglevel", "1"]
+CMD ["-www", "8080", "-dbase", "/var/domoticz/domoticz.db", "-log", "/var/log/domoticz.log", "-loglevel", "1"]
 
