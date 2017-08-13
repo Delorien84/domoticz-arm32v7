@@ -1,0 +1,1 @@
+# domoticz-arm32v7
