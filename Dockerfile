@@ -11,7 +11,9 @@ RUN apt-get update && apt-get install wget && \
 	apt-get purge wget && \
 	apt-get autoremove && \
 	apt-get clean all && \
-    	rm -r /var/lib/apt/lists/*
+	rm -r /var/lib/apt/lists/* && \
+	mkdir -p /var/domoticz && \
+	mkdir -p /var/log
 
 RUN [ "cross-build-end" ]  
 
