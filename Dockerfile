@@ -8,6 +8,8 @@ RUN apt-get update && apt-get install wget && \
 	wget https://releases.domoticz.com/releases/release/domoticz_linux_armv7l.tgz && \
 	tar xvfz domoticz_linux_armv7l.tgz && \
 	rm domoticz_linux_armv7l.tgz && \
+	apt-get purge wget && \
+	apt-get autoremove && \
 	apt-get clean all && \
     	rm -r /var/lib/apt/lists/*
 
