@@ -2,7 +2,7 @@ FROM resin/armv7hf-debian:stretch
 
 RUN [ "cross-build-start" ]
 
-RUN apt-get update && apt-get install wget python3.5 python3.5-dev && \
+RUN apt-get update && apt-get install wget python3.5 python3.5-dev libusb-0.1-4 && \
     mkdir -p /opt/domoticz && \
     cd /opt/domoticz && \
 	wget https://releases.domoticz.com/releases/release/domoticz_linux_armv7l.tgz && \
